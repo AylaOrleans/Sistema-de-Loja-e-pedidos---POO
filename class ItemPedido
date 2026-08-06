@@ -1,0 +1,27 @@
+package lojaloja;
+
+public class ItemPedido {
+    private Produto produto;
+    private int quantidadeComprada;
+
+    public ItemPedido(Produto produto, int quantidadeComprada) {
+        this.produto = produto;
+        this.quantidadeComprada = quantidadeComprada;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public int getQuandtidadeComprada() {
+        return quantidadeComprada;
+    }
+
+    public double calcularSubtotal() {
+        return produto.getPreco() * quantidadeComprada;
+    }
+
+    public String toString() {
+        return produto.getNome() + quantidadeComprada + calcularSubtotal();
+    }
+}
