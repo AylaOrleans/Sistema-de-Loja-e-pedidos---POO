@@ -1,0 +1,29 @@
+package lojaloja;
+
+public class Funcionario extends Pessoa {
+    int matricula;
+    double salario;
+
+    Funcionario(String nome, String cpf, int matricula, double salario) {
+        super(nome, cpf);
+        this.matricula = matricula;
+        this.salario = salario;
+    }
+
+    public void aumentarSalario(double valor) {
+        if (validarAumento(valor)) {
+            salario += valor;
+        }
+    }
+
+    private boolean validarAumento(double valor) {
+        if (valor > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public String toString() {
+        return super.toString() + matricula + salario;
+    }
+}
