@@ -1,0 +1,18 @@
+package lojaloja;
+
+public class Cliente extends Pessoa {
+    int codigoDeIdentificacao;
+
+    public Cliente(String nome, String cpf, int codigoDeIdentificacao) {
+        super(nome, cpf);
+        this.codigoDeIdentificacao = codigoDeIdentificacao;
+    }
+
+    public int getCodigoDeIdentificacao() {
+        return codigoDeIdentificacao;
+    }
+
+    public String toString() {
+        return super.toString() + codigoDeIdentificacao;
+    }
+}
