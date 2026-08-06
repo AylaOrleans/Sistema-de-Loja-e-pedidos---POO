@@ -1,0 +1,23 @@
+package lojaloja;
+
+public class Pessoa {
+    private String nome;
+    private String cpf;
+
+    Pessoa(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+
+    public String mostrarNome() {
+        return nome;
+    }
+
+    public String mostrarCpf() {
+        return cpf;
+    }
+
+    public String toString() {
+        return nome + cpf;
+    }
+}
